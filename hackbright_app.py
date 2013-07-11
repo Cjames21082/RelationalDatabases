@@ -36,7 +36,7 @@ def show_grades(first_name, last_name):
     #for i in range(len(rows)):
     #return " %s, %s" %(rows[i][0], rows[i][1])
 
-def get_student_by_github(github):
+def get_student_by_github(github): 
     query = """SELECT first_name, last_name, github FROM Students WHERE github = ?"""
     DB.execute(query, (github,))
     row = DB.fetchone()
