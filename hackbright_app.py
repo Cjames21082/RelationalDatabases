@@ -72,8 +72,8 @@ def project_by_title(project_title):
     return rows
     #print """\
 #Title: %s
-Description: %s
-Max Grade: %d"""%(row[0], row[1], row[2])
+#Description: %s
+#Max Grade: %d"""%(row[0], row[1], row[2])
 
 
 ########################## Student #############################################
