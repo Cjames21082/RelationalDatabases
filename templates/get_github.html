@@ -1,9 +1,41 @@
 <html>
 	<body>
-		<form action="/student">
-			<label for="github"> Enter Github </label>
-			<input type="text" name="github" />
-			<input type="submit">
+		<h1>Welcome to Hackbright Academy!!</h1>
+
+		<form action="/newStudent">
+			<h2><label for="newStudent"> New Student </label></h2>
+			<input type="text" value= "First Name" name="first_name" />
+			<input type="text" value= "Last Name" name="last_name" />
+			<input type="text" value= "Github" name="github" />
+			<input type="submit" value= "Submit">
 		</form>
+
+		<form action="addProject">
+			<h2><label for="addProject"> New Project </label></h2>
+			<input type="text" value="Project Title" name="title"/>
+			<input type="text" value="Decription" name="description"/>
+			<input type="text" value="Final Grade" name="max_grade"/>
+			<input type="submit" value= "Submit">
+		</form>
+
+		<form action="assignGrade">
+			<h2><label for="assignGrade"> Assign Grade </label></h2>
+			<input type="text" value="Project Title" name="title"/>
+			<input type="text" value="Grade" name="grade"/>
+		</br>
+			<input type="text" value="First Name" name="first_name"/>
+			<input type="text" value="Last Name" name="last_name"/>
+			<input type="submit" value= "Submit">
+		</form>
+
+		<form action="/student">
+			<h2><label for="github"> Search Github </label></h2>
+			<input type="text" value="github" name="github" />
+			<input type="submit" value= "Submit">
+		</form>
+
+
 	</body>
+
+	
 </html>

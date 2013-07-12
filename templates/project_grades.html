@@ -1,0 +1,23 @@
+<html>
+	<body>
+
+		<h1>Project Title: {{project_grades[0][0]}}</h1>
+		
+		
+		<p>These are all the grades for this project</p>
+		
+		<ul>
+		{% for item in project_grades %}
+		<li> Student: {{item[2]}} {{item[3]}}
+			</br>
+			Grade: {{item[4]}}
+			</br>
+			Github: <a href= "/student?github={{item[1]|urlencode}}"> {{item[1]}} </a>
+			</br></br>
+		</li>
+		{% endfor %}
+		</ul>
+
+		<h3><a href="/"> Main Page </a> </h3>	
+	</body>
+</html>

@@ -2,18 +2,26 @@
 	<body>
 		<h1>Student: {{first_name}} {{last_name}}</h1>
 		<h2>Github: {{github}}</h2>
-		
-		<p>This student has shown extreme recalcitrance and has generally proved to be unreliable.</p>
-		<p>It is my recommendation that they be put on double-secret probation for the remainder of the course.</p>
+	
+		<form action="addProject">
+			<h2><label for="addProject"> New Project </label></h2>
+			<input type="text" value="Project Title" name="title"/>
+			<input type="text" value="Decription" name="description"/>
+			<input type="text" value="Final Grade" name="max_grade"/>
+			<input type="submit" value= "Submit">
+		</form>
 
-		<h2>Grades:</h2>
+		<h2>Student History:</h2>
 		<ul>
 			{% for item in grades %}
-				<li>Project: <a href= {{item[0]}}>  {{item[0]}} </a> 
+	
+				<li>Project: <a href= "/grades?title={{item[0]|urlencode}}">  {{item[0]}} </a> 
 					</br> Grade:{{item[1]}}
 				</li>
 					</br>
 			{% endfor %}
 		</ul> 
+
+		<h3><a href="/"> Main Page </a> </h3>
 	</body>
 </html>
